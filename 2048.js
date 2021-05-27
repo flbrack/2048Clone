@@ -19,8 +19,8 @@ const pad = 2;
 var hmargin = innerWidth/2 - 2*(sidelength+pad);
 var vmargin = innerHeight/2 - 2*(sidelength+pad);
 
-//var grid = [[2,16,8,16],[128,64,128,256],[2,1024,32,8],[64,0,0,0]];
-var grid = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+var grid = [[2,16,8,16],[128,64,128,256],[2,1024,32,8],[64,0,0,0]];
+//var grid = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
 addSquare();
 
 var gridcheck = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
@@ -326,6 +326,7 @@ function loseCheck(){
 	upMerge(grid2);
 	downMerge(grid2);
 
+	drawGame();
 	var check2 = 0;
 	for (var i=0;i<4;i++){
 		for (var j=0;j<4;j++){
@@ -334,6 +335,7 @@ function loseCheck(){
 	}
 
 	if (check2==16 && check==16){
+		drawGame();
 		gameOver();
 	}
 }
