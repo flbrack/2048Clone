@@ -25,7 +25,7 @@ addSquare();
 
 var gridcheck = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
 
-const col0 = '#D9FCFC';
+const col0 = '#FFFF99'
 const col2 = '#CCFFFF';
 const col4 = '#99FFFF';
 const col8 = '#66FFFF';
@@ -55,6 +55,9 @@ const colorDict = {
 
 function drawGame(){
 	c.clearRect(0,0,innerWidth,innerHeight)
+	c.font = "60px Arial";
+	c.fillStyle = 'black';
+	c.fillText("Fionn's 2048",hmargin-10, 100);
 	for (var i=0;i<4;i++){
 		for (var j=0;j<4;j++){
 			c.fillStyle = colorDict[grid[j][i]];
